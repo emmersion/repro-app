@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  proxy:
+    image: nginx:alpine
+    ports: 
+      - "8081:8081"
+    volumes:
+      - "./application.conf:/etc/nginx/conf.d/application.conf:ro"
